@@ -273,6 +273,9 @@ nav h1 a:focus {
   margin: 0;
   padding: 1em;
 }
+#restaurant-hours tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -340,9 +343,6 @@ nav h1 a:focus {
   color: #eee;
   width: fit-content;
 }
-#restaurant-hours td {
-  color: #666;
-}
 /* ====================== Responsive styles ====================== */
 @media (min-width: 700px) {
   body {
@@ -404,7 +404,7 @@ nav h1 a:focus {
   #restaurant-address{
     padding:8px 1em;
   }
-  #restaurant-hours  {
+  #restaurant-hours {
     padding: 0 1em;
   }
   #restaurant-container {
