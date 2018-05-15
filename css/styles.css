@@ -463,7 +463,7 @@ nav h1 a:focus {
   }
   #restaurants-list {
     display: block;
-    height: calc(100vh - 165px);
+    height: calc(100vh - 175px);
     margin:0 auto;
   }
   #restaurants-list li {
