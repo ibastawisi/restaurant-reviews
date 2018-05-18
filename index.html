@@ -11,7 +11,9 @@
 <body>
   <header>
     <nav>
-      <h1><a href="">Restaurant Reviews</a></h1>
+      <h1>
+        <a href="">Restaurant Reviews</a>
+      </h1>
     </nav>
   </header>
 
@@ -34,14 +36,28 @@
       <ul id="restaurants-list" role="group" tabindex="0"></ul>
     </section>
   </main>
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }</script>
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUXmzJ1kEIsHitQ71vfUmFif8pUtKMSBM&libraries=places&callback=initMap"></script>
 
 
   <footer id="footer">
-    Copyright (c) 2017 <a href=""><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017
+    <a href="">
+      <strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
   </footer>
 
 </body>
