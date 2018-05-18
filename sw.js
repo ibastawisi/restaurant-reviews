@@ -2,7 +2,7 @@ self.addEventListener('install', e => {
     e.waitUntil(
         caches.open('static').then(cache => {
             cache.addAll([
-                '/',
+                '/restaurant-reviews/',
                 'data/restaurants.json',
                 'js/main.js',
                 'js/dbhelper.js',
