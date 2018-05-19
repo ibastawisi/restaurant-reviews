@@ -71,7 +71,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #footer a {
   margin: 0 0.5em;;
 }
-.sr-only {
+.sr-only,
+.skip-link {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -82,6 +83,23 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   border: 0;
+}
+.skip-link {
+  position: absolute;
+  top: 0;
+}
+a.skip-link:active,  a.skip-link:focus {
+  z-index: 10;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  -webkit-clip-path: none;
+  clip-path: none;
+  padding: 0.5em 1em;
+  background-color: #d00;
+  color: #fff;
 }
 /* ====================== Navigation ====================== */
 header {
@@ -360,6 +378,7 @@ nav h1 a:focus {
     position: relative;
   }
   .filter-options {
+    width: 190px;
     top: 0;
   }
   .filter-options select {
@@ -457,6 +476,9 @@ nav h1 a:focus {
     display: block;
     flex: 0 0 40%;
     max-width: 40%;
+  }
+  .filter-options {
+    width: 100%;
   }
   .filter-options select {
     margin: 0;

@@ -19,21 +19,20 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map"></div>
+        <a href="#neighborhoods-select" class="skip-link">Skip map</a>
+      <div id="map" aria-role="application" aria-label="neighborhood map"></div>
     </section>
     <section class="filter-container">
       <form class="filter-options">
         <h2>Filter Options</h2>
-        <label for="neighborhoods-select" class="sr-only">Filter by neighborhoods</label>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" aria-label="Filter by neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <label for="cuisines-select" class="sr-only">Filter by cuisines</label>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" aria-label="Filter by cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </form>
-      <ul id="restaurants-list" role="group" tabindex="0"></ul>
+      <ul id="restaurants-list" role="list" aria-label="Filter result" tabindex="0"></ul>
     </section>
   </main>
   <script>
